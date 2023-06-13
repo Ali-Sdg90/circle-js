@@ -1,25 +1,26 @@
 const circle = document.querySelector(".circle");
-circle.addEventListener('click' , func);
+const score = document.querySelector("#score-container span");
+circle.addEventListener("mouseover", func);
 
-function func (){
-    let x , y;
-    if (screen.width < 470){
-         x = (Math.random() * 450);
-         y = (Math.random() * 500);
-    }
-    else {
-             x = (Math.random() * 1100);
-             y = (Math.random() * 500);
-    }
-    circle.style.left = x + "px";
-    circle.style.top = y + "px";
-    circle.style.backgroundColor=  getRandomLightColor();
+let scoreCounter = 0;
+
+function func() {
+    let x, y;
+
+    x = Math.random() * 80 + 10;
+    y = Math.random() * 80 + 10;
+
+    circle.style.left = x + "%";
+    circle.style.top = y + "%";
+    circle.style.backgroundColor = getRandomLightColor();
+
+    score.textContent = scoreCounter++;
 }
+func();
 
 function getRandomLightColor() {
-    let r = 50 + Math.round(250 * Math.random());
-    let g = 20 + Math.round(250 * Math.random());
-    let b = 35 + Math.round(250 * Math.random());
+    let r = 55 + Math.round(200 * Math.random());
+    let g = 55 + Math.round(200 * Math.random());
+    let b = 55 + Math.round(200 * Math.random());
     return `rgb(${r}, ${g}, ${b})`;
 }
-
