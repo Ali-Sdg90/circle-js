@@ -24,3 +24,9 @@ function getRandomLightColor() {
     let b = 55 + Math.round(200 * Math.random());
     return `rgb(${r}, ${g}, ${b})`;
 }
+
+// و بعد 2 ثانیه دیگه حرکت نمیکنه ms500 به صورت رندوم حرکت کنه با فاصله زمانی
+const randomPlace = setInterval(func, 500);
+setTimeout(() => {
+    clearInterval(randomPlace);
+}, 2000);

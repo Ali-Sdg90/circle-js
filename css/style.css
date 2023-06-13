@@ -2,41 +2,31 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-    user-select: none;
-}
-
-*:focus {
-    outline: none;
 }
 
 body {
     display: flex;
     justify-content: center;
-    background-color: antiquewhite;
     background-color: #333;
 }
 
 .container {
-    width: 900px;
-    height: 600px;
+    height: 80vh;
+    width: 70vw;
     position: relative;
     border: 3px solid rgb(34, 34, 34);
     border-radius: 10px;
     box-shadow: 0 0 3px black, inset 0 0 20px rgba(0, 0, 0, 0.6);
     overflow: hidden;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .circle {
     width: 120px;
     height: 120px;
-    background-color: rgb(254, 54, 4);
-    border-radius: 100%;
+    border-radius: 50%;
     box-shadow: 3px 5px 10px;
     position: absolute;
-    left: 20%;
-    top: 20%;
     transform: translate(-50%, -50%);
     cursor: pointer;
     transition: all 0.25s;
@@ -57,136 +47,11 @@ body {
     justify-content: center;
     align-items: center;
     width: 158px;
+    opacity: 0.95;
 }
 #score-container span {
     font-family: sans-serif;
     padding-left: 5px;
-}
-
-/* Custome Button */
-
-
-
-
-.button-cover {
-    height: 100px;
-    margin: 20px;
-    background-color: rgb(75, 75, 75);
-    border-radius: 4px;
-    width: 100px;
-}
-
-.button-cover:before {
-    counter-increment: button-counter;
-    content: counter(button-counter);
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    color: #d7e3e3;
-    font-size: 12px;
-    line-height: 1;
-    padding: 5px;
-}
-
-.button-cover,
-.knobs,
-.layer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-.button {
-    position: relative;
-    top: 50%;
-    width: 74px;
-    height: 36px;
-    margin: -20px auto 0 auto;
-    overflow: hidden;
-}
-
-.button.r,
-.button.r .layer {
-    border-radius: 100px;
-}
-
-.button.b2 {
-    border-radius: 2px;
-}
-
-.checkbox {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    opacity: 0;
-    cursor: pointer;
-    z-index: 3;
-}
-
-.knobs {
-    z-index: 2;
-}
-
-.layer {
-    width: 100%;
-    background-color: #ebf7fc;
-    transition: 0.3s ease all;
-    z-index: 1;
-}
-#button-10 .knobs:before,
-#button-10 .knobs:after,
-#button-10 .knobs span {
-    position: absolute;
-    top: 4px;
-    width: 20px;
-    height: 10px;
-    font-size: 10px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 1;
-    padding: 9px 4px;
-    border-radius: 2px;
-    transition: 0.3s ease all;
-}
-
-#button-10 .knobs:before {
-    content: "";
-    left: 4px;
-    background-color: #03a9f4;
-}
-
-#button-10 .knobs:after {
-    content: "NO";
-    right: 4px;
-    color: #4e4e4e;
-}
-
-#button-10 .knobs span {
-    display: inline-block;
-    left: 4px;
-    color: #fff;
-    z-index: 1;
-}
-
-#button-10 .checkbox:checked + .knobs span {
-    color: #4e4e4e;
-}
-
-#button-10 .checkbox:checked + .knobs:before {
-    left: 42px;
-    background-color: #f44336;
-}
-
-#button-10 .checkbox:checked + .knobs:after {
-    color: #fff;
-}
-
-#button-10 .checkbox:checked ~ .layer {
-    background-color: #fcebeb;
 }
 
 @media screen and (max-width: 480px) {
